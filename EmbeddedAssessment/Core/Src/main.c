@@ -23,7 +23,7 @@
 #include "LightEmittingDiode.h"
 #include "AnalogToDigital.h"
 #include "SPInter.h"
-
+#include <stdio.h>
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 
@@ -73,6 +73,7 @@ int main(void)
 	  		  if(adcvalue>=512)
 	  		  {
 	  			  DistanceInCM = DistanceCal();
+	  			  printf("Distance measure = %d\n",DistanceInCM);
 	  			  SPIfunction(hspi1 , &DistanceInCM);
 	  			  led_obstacle(&DistanceInCM);
 	  		  }

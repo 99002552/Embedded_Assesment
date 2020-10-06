@@ -6,6 +6,20 @@
  */
 #include "LightEmittingDiode.h"
 
+/*
+ * @Brief description Indicate whether the system is ON or OFF
+ *
+ * @Function-
+ *
+ * @Param1- state
+ *
+ * @Definition- state = 1 -> System ON and state = 0 -> System OFF
+ *
+ * @Design by- Santhosh Kumar Kadaveru
+ *
+ * @Date and Time- 04/10/2020
+ *
+ */
 void led_start(int state)
 {
 	if(state ==1)
@@ -19,6 +33,20 @@ void led_start(int state)
 	}
 }
 
+/*
+ * @Brief description- Turns on the LEDs when an obstacle is detected
+ *
+ * @Function-
+ *
+ * @Param1- Dist
+ *
+ * @Definition- state < 10 -> LED ON else LED OFF
+ *
+ * @Design by- Santhosh Kumar Kadaveru
+ *
+ * @Date and Time- 04/10/2020
+ *
+ */
 void led_obstacle(uint8_t *Dist)
 {
 	if(*Dist <10)

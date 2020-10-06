@@ -6,6 +6,19 @@
  */
 
 #include "UltraSonic.h"
+
+/*
+ *
+ * @Function- DistanceCal()
+ * @Brief description - This function is responsible for calculating the distance at which the obstacle is present.
+ *
+ * @Definition-
+ *
+ * @Design by- Santhosh Kumar Kadaveru
+ *
+ * @Date and Time- 05/10/2020  8:12PM
+ *
+ */
 uint8_t DistanceCal()
 {
 	Ultra_Sonic *pUS;
@@ -33,6 +46,20 @@ uint8_t DistanceCal()
 	return dis;
 }
 
+/*
+ *
+ * @Function- usDelay()
+ * @Brief description - This function is responsible for providing micro second delay.
+ *
+ * @param1 - uSec
+ *
+ * @Definition-
+ *
+ * @Design by- Santhosh Kumar Kadaveru
+ *
+ * @Date and Time- 05/10/2020  8:20PM
+ *
+ */
 void usDelay(uint8_t uSec)
 {
 	for(int i=0;i<uSec;i++);
